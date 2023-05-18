@@ -46,10 +46,7 @@ const Pagination: FC<IPagination> = ({
 
     useEffect(() => {
         setValuePagination(getPaginatedData())
-        console.log(getPaginatedData())
     }, [currentPage, valueDefault, dataLimit])
-
-    //console.log(getPaginatedData())
 
     return (
         <div className={styles.pagination}>
