@@ -1,0 +1,26 @@
+.item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #717475;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 169px;
+  height: 35px;
+  &.active{
+    background-color: #eff5ff;
+    color: #1976D2;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #1976D2;
+    }
+  }
+}

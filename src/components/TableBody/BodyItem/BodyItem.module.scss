@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.56rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3125rem;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 0.25px;
+
+  > h4 {
+    color: #3C3F41;
+  }
+
+  > h6 {
+    color: #959B9E;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1.31rem;
+  align-items: center;
+
+  > img {
+    cursor: pointer;
+  }
+}
+
+.switcher{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  background: #F0F3F5;
+  height: 40px;
+  > div{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5625rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #3C3F41;
+  }
+}

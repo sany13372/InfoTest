@@ -1,0 +1,30 @@
+.line {
+  max-width: 338px;
+  height: 40px;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border: 1px solid #DDE2E5;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 1rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > input {
+    background-color: transparent;
+    color: #959B9E;
+    margin-left: 0.5rem;
+    font-size: 0.8125rem;
+
+
+    &::placeholder {
+      color: #959B9E;
+    }
+  }
+}
