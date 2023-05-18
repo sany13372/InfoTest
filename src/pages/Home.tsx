@@ -38,7 +38,7 @@ const HomePage: FC = () => {
                 <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage}
                             valueDefault={managers}
                             setValuePagination={setManagersPaginate}
-                            limitData={limit}/>
+                            dataLimit={limit}/>
                 <Limit value={limit} setValue={setLimit}/>
             </div>
             <TableHeader/>
@@ -47,7 +47,7 @@ const HomePage: FC = () => {
             <div className={cn(styles.linePagination, styles.bottom)}>
                 <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} valueDefault={managers}
                             setValuePagination={setManagersPaginate}
-                            limitData={limit}/>
+                            dataLimit={limit}/>
                 <Limit value={limit} setValue={setLimit}/>
             </div>
             <ModalEdit setSelectManager={setSelectManager} selectManager={selectManager} setManagers={setManagers}

@@ -5,7 +5,7 @@ import styles from './Pagination.module.scss'
 interface IPagination {
     valueDefault: any
     setValuePagination: any
-    limitData: string
+    dataLimit: string
     currentPage: number
     setCurrentPage: Dispatch<SetStateAction<number>>
 }
@@ -13,15 +13,14 @@ interface IPagination {
 const Pagination: FC<IPagination> = ({
                                          setValuePagination,
                                          valueDefault,
-                                         limitData,
+                                         dataLimit,
                                          setCurrentPage,
                                          currentPage,
                                      }) => {
-    const dataLimit = Number(limitData.split('').slice(9, 11).join(''))
 
     const getPaginationGroup = () => {
         let counts = []
-        for (let i = 0; i < Math.ceil(valueDefault.length / dataLimit); i++) {
+        for (let i = 0; i < Math.ceil(valueDefault.length / Number(dataLimit.split('').slice(9, 11).join(''))); i++) {
             counts.push(i)
         }
         return counts.map((_, idx) => idx + 1);
@@ -40,14 +39,17 @@ const Pagination: FC<IPagination> = ({
     }
 
     const getPaginatedData = () => {
-        const startIndex = (currentPage * dataLimit) - dataLimit;
-        const endIndex = startIndex + dataLimit;
+        const startIndex = (currentPage * Number(dataLimit.split('').slice(9, 11).join(''))) - Number(dataLimit.split('').slice(9, 11).join(''));
+        const endIndex = startIndex + Number(dataLimit.split('').slice(9, 11).join(''));
         return valueDefault.slice(startIndex, endIndex);
     };
 
     useEffect(() => {
         setValuePagination(getPaginatedData())
-    }, [currentPage, valueDefault])
+        console.log(getPaginatedData())
+    }, [currentPage, valueDefault, dataLimit])
+
+    //console.log(getPaginatedData())
 
     return (
         <div className={styles.pagination}>
