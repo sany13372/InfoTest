@@ -29,7 +29,7 @@ const HomePage: FC = () => {
     return (
         <main className={styles.block}>
             <LineNavigate/>
-            <SearchLine/>
+            <SearchLine setValue={setManagers} value={managers} defaultValue={data}/>
             <div className={styles.lineButton}>
                 <ButtonFilter/>
                 <ButtonAdd setModalType={setModalType}/>
@@ -44,7 +44,7 @@ const HomePage: FC = () => {
             <TableHeader/>
             <TableBody managers={managersPaginate} setSelectManager={setSelectManager} setModalType={setModalType}
                        setManagers={setManagers}/>
-            <div className={cn(styles.linePagination,styles.bottom) }>
+            <div className={cn(styles.linePagination, styles.bottom)}>
                 <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} valueDefault={managers}
                             setValuePagination={setManagersPaginate}
                             limitData={limit}/>
